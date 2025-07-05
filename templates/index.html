@@ -1,0 +1,434 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sb's - Portfolio</title>
+
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <!-- Custom CSS (Your new stylesheet) -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav id="main-navbar" class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">...</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#certifications">Certifications</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+
+                    <!-- === ADD THIS THEME TOGGLE BUTTON === -->
+                    <li class="nav-item ms-lg-3">
+                        <button id="theme-toggle" class="btn btn-outline-secondary btn-sm"
+                            style="border-radius: 50%; width: 30px; height: 30px;">
+                            <i id="theme-toggle-icon" class="fa-solid fa-moon"></i>
+                        </button>
+                    </li>
+                    <!-- =================================== -->
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="hero" class="hero-section text-white text-center d-flex align-items-center">
+        <div class="container">
+            <div class="hero-content fade-in">
+                <img src="{% static 'images/Amio1.jpg' %}" alt="Your Photo" class="profile-pic mb-4">
+                <h1 class="display-4 fw-bold name">Sadman Bin Khorshed Amio</h1>
+                <p class="lead">Student @UAP | Python & Django Developer | AI Enthusiast</p>
+                <a href="#contact" class="btn btn-primary btn-lg me-2 mt-3">Contact</a>
+                <a href="{% static 'pdf/AMIO__CV.pdf' %}" class="btn btn-outline-light btn-lg mt-3" target="_blank"
+                    rel="noopener noreferrer">View CV</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container my-5">
+
+        <!-- About Me Section -->
+        <section id="about" class="section-padding fade-in">
+            <div class="text-center">
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">A little bit about my journey</p>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <p class="text-center lead">Hello! I'm <b>Sadman Bin Khorshed Amio</b>, a passionate and
+                        detail-oriented
+                        developer currently pursuing my Computer Science degree at the University of Asia Pacific. My
+                        journey in technology is driven by a deep curiosity for how things work, which led me to
+                        specialize in building robust and scalable web applications with Python and Django. I love the
+                        challenge of turning complex problems into elegant, user-friendly solutions. Whether it's
+                        developing a full-stack e-commerce platform or programming an autonomous robot, I am constantly
+                        exploring the boundaries of what's possible with code. With a strong foundation in software
+                        development and a growing enthusiasm for Artificial Intelligence, I am excited to contribute to
+                        innovative projects and continue learning every day.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section-padding fade-in">
+            <div class="text-center">
+                <h2 class="section-title">My Skills</h2>
+                <p class="section-subtitle">The technologies I work with</p>
+            </div>
+            <div class="row text-center g-4">
+                <div class="col-lg-2 col-md-3 col-4">
+                    <div class="skill-item"><i class="fab fa-python fa-3x"></i>
+                        <p>Python</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-4">
+                    <div class="skill-item"><i class="devicon-django-plain fa-3x"></i>
+                        <p>Django</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-4">
+                    <div class="skill-item"><i class="fab fa-js-square fa-3x"></i>
+                        <p>JavaScript</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-4">
+                    <div class="skill-item"><i class="fa-solid fa-code fa-3x"></i>
+                        <p>HTML</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-4">
+                    <div class="skill-item"><i class="fa-solid fa-file-code fa-3x"></i>
+                        <p>CSS</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-4">
+                    <div class="skill-item"><i class="fab fa-bootstrap fa-3x"></i>
+                        <p>Bootstrap</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-4">
+                    <div class="skill-item"><i class="fas fa-database fa-3x"></i>
+                        <p>MySQL</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-4">
+                    <div class="skill-item"><i class="fab fa-java fa-3x"></i>
+                        <p>Java</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-4">
+                    <div class="skill-item"><i class="fa-solid fa-c fa-3x"></i>
+                        <p>C/C++</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-4">
+                    <div class="skill-item"><i class="fa-solid fa-robot fa-3x"></i>
+                        <p>Robotics</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-4">
+                    <div class="skill-item"><i class="fab fa-git-alt fa-3x"></i>
+                        <p>Git</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-4">
+                    <div class="skill-item"><i class="fa-brands fa-github fa-3x"></i><i class="fa-brands fa-github"></i>
+                        <p>GitHub</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section-padding fade-in">
+            <div class="text-center">
+                <h2 class="section-title">My Projects</h2>
+                <p class="section-subtitle">Some projects of me</p>
+            </div>
+            <div class="row">
+                <!-- Project 1 -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card project-card h-100">
+                        <img src="{% static 'images/OBMS.jpg' %}" class="card-img-top" alt="Project 1">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Book Byte</h5>
+                            <p class="card-text">A full-featured e-commerce platform for an online bookstore, built with
+                                Python and Django. This system allows customers to browse, purchase, and review books,
+                                while providing administrators with a powerful dashboard to manage inventory, process
+                                orders, and oversee user activity.</p>
+                            <div class="mt-auto">
+                                <span class="badge bg-primary me-1">Python</span><span
+                                    class="badge bg-primary me-1">Django</span><span
+                                    class="badge bg-primary me-1">JavaScript</span><span
+                                    class="badge bg-primary me-1">HTML</span><span
+                                    class="badge bg-primary me-1">CSS</span>
+                                <div class="project-links mt-3">
+                                    <a href="https://github.com/Sb-Amio/BookByte_4.1"
+                                        class="btn btn-sm btn-outline-primary" target="_blank"
+                                        rel="noopener noreferrer">View on GitHub</a>
+                                    <a href="https://amio201.pythonanywhere.com/" class="btn btn-sm btn-primary"
+                                        target="_blank" rel="noopener noreferrer">Live Demo</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 2 & 3 (similar structure) -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card project-card h-100">
+                        <img src="{% static 'images/HFR.jpg' %}">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Project Title Two</h5>
+                            <p class="card-text">This project creates an autonomous robot that can lock onto and follow
+                                a person. </p>
+                            <div class="mt-auto">
+                                <span class="badge bg-primary me-1">Arduino UNO R3</span><span
+                                    class="badge bg-primary me-1">IR & Ultrasonic Sensor</span><span
+                                    class="badge bg-primary me-1">Motors & Driver</span>
+                                <div class="project-links mt-3">
+                                    <a href="#" class="btn btn-sm btn-outline-primary">View on GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card project-card h-100">
+                        <img src="{% static 'images/LFR.jpg' %}" class="card-img-top" alt="Project 3">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Line Follower Robot</h5>
+                            <p class="card-text">An Arduino-based line follower is a small robot that
+                                uses sensors to see a black line on the floor and automatically steers itself to follow
+                                it.</p>
+                            <div class="mt-auto">
+                                <span class="badge bg-primary me-1">Arduino UNO R3</span><span
+                                    class="badge bg-primary me-1">IR Sensor</span><span
+                                    class="badge bg-primary me-1">Motors & Driver</span>
+                                <div class="project-links mt-3">
+                                    <a href="#" class="btn btn-sm btn-outline-primary">View on GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="section-padding fade-in">
+            <div class="text-center">
+                <h2 class="section-title">Education</h2>
+                <p class="section-subtitle">My academic background</p>
+            </div>
+            <div class="row">
+                <div class="col-md-10 mx-auto">
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-content">
+                                <h3>Bachelor of Science in Computer Science and Engineering</h3>
+                                <span class="timeline-date">2022 - 2025</span>
+                                <p class="timeline-institution">CGPA: 3.91 (Out of 4.00)</p>
+                                <p class="timeline-institution">University of Asia Pacific</p>
+                                <!-- <p>Focused on advanced algorithms, machine learning, and distributed systems. Completed
+                                    a thesis on natural language processing models.</p> -->
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-content">
+                                <h3>HSC</h3>
+                                <span class="timeline-date">2020</span>
+                                <p class="timeline-institution">GPA: 5.00 (Out of 5.00)</p>
+                                <p class="timeline-institution">Govt. Haraganga College</p>
+                                <!-- <p>Gained a strong foundation in software development life cycle, database management,
+                                    and web technologies. President of the coding club.</p> -->
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-content">
+                                <h3>SSC</h3>
+                                <span class="timeline-date">2018</span>
+                                <p class="timeline-institution">GPA: 4.94 (Out of 5.00)</p>
+                                <p class="timeline-institution">Abdullapur High School</p>
+                                <!-- <p>Gained a strong foundation in software development life cycle, database management,
+                                    and web technologies. President of the coding club.</p> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section id="certifications" class="section-padding fade-in">
+            <div class="text-center">
+                <h2 class="section-title">Certifications</h2>
+                <p class="section-subtitle">My key achievements</p>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-6 col-lg-4">
+                    <div class="cert-card">
+                        <div class="cert-icon"><i class="fa-solid fa-award"></i></div>
+                        <h5 class="cert-title">VC Award Certificate</h5>
+                        <p class="cert-issuer">Received 3 Times</p>
+                        <a href="#" class="cert-link" data-bs-toggle="modal" data-bs-target="#credentialModal"
+                            data-images="{% static 'images/background.jpg' %},{% static 'images/background.jpg' %},{% static 'images/background.jpg' %}"
+                            data-image-title="VC Award Certificates">
+                            View Credentials →
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="cert-card">
+                        <div class="cert-icon"><i class="fa-solid fa-award"></i></div>
+                        <h5 class="cert-title">Dean's Award Certificate</h5>
+                        <p class="cert-issuer">Received 4 Times</p>
+                        <a href="#" class="cert-link" data-bs-toggle="modal" data-bs-target="#credentialModal"
+                            data-images="{% static 'images/certificates/deans_award.jpg' %}"
+                            data-image-title="Dean's Award Certificate">
+                            View Credential →
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="cert-card">
+                        <div class="cert-icon"><i class="fa-solid fa-award"></i></div>
+                        <h5 class="cert-title">Completing JavaScript Workshop</h5>
+                        <p class="cert-issuer">OSTAD</p>
+                        <a href="#" class="cert-link" data-bs-toggle="modal" data-bs-target="#credentialModal"
+                            data-images="{% static 'pdf/AMIO__CV.pdf' %}"
+                            data-image-title="JavaScript Workshop Certificate">
+                            View Credential →
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="cert-card">
+                        <div class="cert-icon"><i class="fa-solid fa-award"></i></div>
+                        <h5 class="cert-title">Completing 30 days Arduino Workshop</h5>
+                        <p class="cert-issuer">Gobeshona.com</p>
+                        <a href="#" class="cert-link" data-bs-toggle="modal" data-bs-target="#credentialModal"
+                            data-images="{% static 'images/Background.jpg' %}"
+                            data-image-title="JavaScript Workshop Certificate">
+                            View Credential →
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section-padding contact-section fade-in">
+            <div class="text-center">
+                <h2 class="section-title">Contact Me</h2>
+                <p class="section-subtitle">I would like to hear from you...</p>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <!-- Django Messages -->
+                    {% if messages %}
+                    {% for message in messages %}
+                    <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+                        {{ message }}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                    {% endfor %}
+                    {% endif %}
+
+                    <form method="POST" action="{% url 'index' %}" class="contact-form">
+                        {% csrf_token %}
+                        <div class="mb-3">
+                            {{ form.name }}
+                        </div>
+                        <div class="mb-3">
+                            {{ form.email }}
+                        </div>
+                        <div class="mb-3">
+                            {{ form.message }}
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-dark text-white text-center p-4">
+        <div class="container">
+            <div class="social-icons mb-3">
+                <a href="https://github.com/your-username" target="_blank" class="text-white me-3"><i
+                        class="fab fa-github fa-2x"></i></a>
+                <a href="https://linkedin.com/in/your-username" target="_blank" class="text-white me-3"><i
+                        class="fab fa-linkedin fa-2x"></i></a>
+                <a href="https://twitter.com/your-username" target="_blank" class="text-white"><i
+                        class="fab fa-twitter fa-2x"></i></a>
+            </div>
+            <p class="mt-3">© {% now "Y" %} Sb's Portfolio. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+     <div class="modal fade" id="credentialModal" tabindex="-1" aria-labelledby="credentialModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="credentialModalLabel">Certificate</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Bootstrap Carousel will be dynamically inserted here by JavaScript -->
+                    <div id="credentialCarousel" class="carousel slide">
+                        <div class="carousel-indicators" id="modalCarouselIndicators">
+                            <!-- Indicators will be generated by JS -->
+                        </div>
+                        <div class="carousel-inner" id="modalCarouselInner">
+                            <!-- Carousel items (images) will be generated by JS -->
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#credentialCarousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#credentialCarousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Devicon for more tech icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    <!-- Custom JS -->
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+
+</html>
