@@ -1,0 +1,218 @@
+/* =================================================================
+   1. DEFINE COLOR VARIABLES FOR BOTH THEMES
+================================================================= */
+
+:root {
+    /* Theme-independent variables */
+    --primary-color: #007bff;
+    --primary-dark: #0056b3;
+    --font-family: 'Poppins', sans-serif;
+
+    /* Light Theme Palette (Default) */
+    --bg-color: #ffffff;
+    --secondary-bg-color: #f8f9fa;
+    --card-bg-color: #ffffff;
+    --text-color-primary: #212529;
+    --text-color-secondary: #495057;
+    --text-color-muted: #6c757d;
+    --border-color: #dee2e6;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --navbar-bg: rgba(28, 35, 49, 0.9);
+    --footer-bg: #1c2331;
+}
+
+html.dark-mode {
+    /* Dark Theme Palette */
+    --bg-color: #121212;
+    --secondary-bg-color: #1e1e1e;
+    --card-bg-color: #1e1e1e;
+    --text-color-primary: #e0e0e0;
+    --text-color-secondary: #c0c0c0;
+    --text-color-muted: #a0a0a0;
+    --border-color: #444444;
+    --shadow-color: rgba(0, 0, 0, 0.2);
+    --navbar-bg: rgba(18, 18, 18, 0.9);
+    --footer-bg: #1e1e1e;
+}
+
+/* =================================================================
+   2. APPLY VARIABLES TO YOUR ELEMENTS
+================================================================= */
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 70px;
+}
+
+body, .card, .cert-card, .timeline-content, .skill-item, .contact-form input, .contact-form textarea {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--bg-color);
+    color: var(--text-color-secondary);
+    line-height: 1.7;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    color: var(--text-color-primary);
+}
+
+/* --- Navbar --- */
+#main-navbar.navbar-scrolled {
+    background-color: var(--navbar-bg) !important;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 0.5rem 0;
+}
+
+/* --- Hero Section --- */
+.hero-section {
+    min-height: 100vh;
+    background: linear-gradient(rgba(28, 35, 49, 0.8), rgba(28, 35, 49, 0.8)), 
+    url('../images/Background.jpg') no-repeat center center/cover;
+    position: relative;
+}
+.profile-pic {
+    width: 300px; height: 300px; object-fit: cover;
+    border: 5px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 25px rgba(28, 35, 49, 0.8);
+    opacity: 80%;
+}
+.name { color: white; }
+
+/* --- Section Styling --- */
+.section-padding { padding: 80px 0; }
+.section-title { margin-bottom: 1rem; position: relative; display: inline-block; }
+.section-title::after {
+    content: ''; display: block; width: 60px; height: 4px;
+    background: var(--primary-color); margin: 10px auto 0; border-radius: 2px;
+}
+.section-subtitle { color: var(--text-color-muted); margin-bottom: 3rem; }
+
+/* --- Skills, Projects, Certs, Timeline, Contact --- */
+.skill-item, .timeline-content, .cert-card, .contact-section {
+    background-color: var(--secondary-bg-color);
+}
+.card {
+    background-color: var(--card-bg-color);
+}
+
+.skill-item, .project-card, .cert-card, .timeline-content {
+    border: 1px solid var(--border-color);
+    box-shadow: 0 10px 30px var(--shadow-color);
+    border-radius: 15px;
+}
+.project-card, .cert-card, .skill-item {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card .card-title {
+    color: var(--text-color-primary);
+}
+.project-card .card-text {
+    color: var(--text-color-secondary);
+}
+
+.project-card:hover, .cert-card:hover, .skill-item:hover {
+    transform: translateY(-10px);
+}
+.skill-item { padding: 20px; text-align: center; }
+.skill-item i { color: var(--primary-color); margin-bottom: 10px; }
+
+.timeline { position: relative; padding: 20px 0; }
+.timeline::before {
+    content: ''; position: absolute; top: 0; left: 15px; height: 100%; width: 3px;
+    background: var(--border-color);
+}
+.timeline-item { margin-bottom: 30px; position: relative; padding-left: 45px; }
+.timeline-item::before {
+    content: ''; position: absolute; left: 6.5px; top: 5px; width: 20px; height: 20px;
+    background: var(--primary-color); border: 3px solid var(--bg-color);
+    border-radius: 50%; z-index: 1;
+}
+.timeline-content { padding: 25px; border-left: 4px solid var(--primary-color); }
+.timeline-date { color: var(--primary-color); }
+.timeline-institution { color: var(--text-color-muted); }
+
+.cert-card { padding: 30px; border-top: 5px solid var(--primary-color); }
+.cert-icon { font-size: 3rem; color: var(--primary-color); }
+.cert-issuer { color: var(--text-color-muted); }
+.cert-link { color: var(--primary-dark); }
+
+.contact-form input, .contact-form textarea {
+    width: 100%; padding: 12px 15px; border-radius: 8px;
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-color);
+    color: var(--text-color-primary);
+}
+.contact-form input::placeholder, .contact-form textarea::placeholder {
+    color: var(--text-color-muted);
+}
+.contact-form input:focus, .contact-form textarea:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.25rem rgba(0, 123, 255, 0.25);
+    border-color: var(--primary-color);
+}
+/* --- Footer --- */
+.footer-dark { background-color: var(--footer-bg); padding-top: 30px; padding-bottom: 30px; }
+.social-icons a:hover { color: var(--primary-color) !important; }
+
+/* --- Animations & Responsive --- */
+.fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
+.fade-in.visible { opacity: 1; transform: translateY(0); }
+@media (max-width: 768px) { /* etc. */ }
+
+/* --- MODAL DARK MODE STYLING --- */
+.modal-content {
+    background-color: var(--card-bg-color);
+    border: 1px solid var(--border-color);
+}
+
+.modal-header {
+    border-bottom: 1px solid var(--border-color);
+}
+
+html.dark-mode .btn-close {
+    filter: invert(1) grayscale(100%) brightness(200%);
+}
+/* =================================================================
+   MODAL STYLING FOR FULL VIEW
+================================================================= */
+
+/* 1. Make the modal dialog itself take up more vertical space */
+.modal-dialog.modal-xl {
+    max-width: 95%; /* Use most of the width */
+    height: 95%;   /* Use most of the height */
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+/* 2. Make the modal content and body expand to fill the dialog's new height */
+.modal-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-body {
+    flex-grow: 1; /* Allows the body to take up all remaining space */
+    overflow-y: hidden; /* Prevents a double scrollbar */
+}
+
+/* 3. Make the carousel and its components fill the modal body */
+#credentialCarousel,
+.carousel-inner,
+.carousel-item {
+    height: 100%;
+}
+
+/* 4. This is the most important part: style the image itself */
+.carousel-item img {
+    height: 100%;         /* Fill the vertical space of the carousel item */
+    width: 100%;          /* Fill the horizontal space */
+    object-fit: contain;  /* THIS IS THE MAGIC: It scales the image down to fit,
+                             maintaining its aspect ratio without cropping or stretching. */
+}
